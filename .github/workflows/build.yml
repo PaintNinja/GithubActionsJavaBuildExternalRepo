@@ -1,0 +1,14 @@
+name: Build
+
+on:
+  push:
+    branches: [ "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    uses: PaintNinja/GithubActionsJavaBuild/.github/workflows/gradle.yml@master
+    with:
+      java: 17
